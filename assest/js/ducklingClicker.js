@@ -1,6 +1,7 @@
 /* VARIABLES */
 const FPS = 30;
 const INCREMENT = 1.25;
+let mode = 0;
 let perSecond = [];
 let user;
 let quantity = 1;
@@ -44,7 +45,7 @@ function setDucklingsPerSecond(item) {
 }
 
 function getItemPrice(item) {
-  return Math.ceil(item.price + (item.price * ((item.quantity + quantity - 1) * INCREMENT)));
+  return item.price + (item.price * ((item.quantity + quantity - 1) * INCREMENT));
 }
 
 //LOAD VALUES
@@ -66,7 +67,7 @@ function createProduct(item) {
   product = document.createElement("div");
   product.setAttribute("class", "product");
   product.setAttribute("id", "product" + item.id_item);
-  product.addEventListener("click", () => buy(item.id_item));
+  product.addEventListener("click", () => checkMode(item.id_item));
 
   icon = document.createElement("div");
   icon.setAttribute("class", "icon");
@@ -127,7 +128,15 @@ function loaditems(id) {
   });
 }
 
-function loadupgrades() { }
+function loadupgrades(id) {
+  $.ajax({
+    url: "" + id,
+    method: "GET",
+    success: (result) => {
+
+    }
+  })
+}
 
 function loadAchievements() { }
 
@@ -140,7 +149,37 @@ function loadValues() {
 }
 
 //GAME
+function buy(id) {
+  let itemPrice = Math.ceil(getItemPrice(items[id]));
 
+  if (user.ducklings >= itemPrice) {
+    items[id].quantity += quantity;
+    user.ducklings -= itemPrice;
+    setDucklingsPerSecond(items[id]);
+  }
+}
+
+function sell(id) {
+
+  if (items[id].quantity > 0) {
+
+    let aux = quantity;
+    if (quantity > items[id].quantity) {
+      quantity = items[id].quantity
+      items[id].quantity = 0;
+    } else {
+      items[id].quantity -= quantity
+
+    }
+    user.ducklings += Math.floor(getItemPrice(items[id]) * 0.40);
+    setDucklingsPerSecond(items[id]);
+    quantity = aux;
+  }
+}
+
+function checkMode(id) {
+  mode == 0 ? buy(id) : sell(id);
+}
 
 function changeMode(number) {
   if (number == 1) {
@@ -150,6 +189,7 @@ function changeMode(number) {
     storeBulkBuy.setAttribute("class", "storeBulkMode active");
     storeBulkSell.setAttribute("class", "storeBulkMode");
   }
+  mode = number;
 }
 
 function changeQuantity(number) {
@@ -171,20 +211,6 @@ function changeQuantity(number) {
   }
 }
 
-function buy(id) {
-  let itemPrice = getItemPrice(items[id]);
-
-  if (user.ducklings >= itemPrice) {
-    items[id].quantity += quantity;
-    user.ducklings -= itemPrice;
-    setDucklingsPerSecond(items[id]);
-  }
-}
-
-function sell(item) {
-  items[item].quantity -= quantity;
-}
-
 function productOwneds() {
   for (let i = 1; i < items.length; i++) {
     document.getElementById('productOwned' + i).innerText = items[i].quantity;
@@ -193,7 +219,7 @@ function productOwneds() {
 
 function productPrices() {
   for (let i = 1; i < items.length; i++) {
-    document.getElementById('productPrice' + i).innerText = `${getItemPrice(items[i])} quacks`;
+    document.getElementById('productPrice' + i).innerText = `${Math.ceil(getItemPrice(items[i]))} quacks`;
   }
 }
 function render() {
