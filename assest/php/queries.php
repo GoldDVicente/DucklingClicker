@@ -23,6 +23,3 @@ function UpdateValues($conexion, $string, $value)
     $result ? OkRequest($value) : BadRequest($conexion);
     exit();
 }
-
-
-?>

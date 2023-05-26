@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $select_value = "SELECT * FROM item LEFT JOIN user_item on item.id_item = user_item.id_item";
     SelectValues($connection, $select_value);
 }
-
+/*
 //POST -> CREATE
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $item = json_decode(file_get_contents('php://input'));
@@ -47,6 +47,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
         $query ? NotFoundRequest() : BadRequest($connection);
     }
 }
-
+*/
 mysqli_close($conexion);
-?>
