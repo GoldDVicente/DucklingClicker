@@ -1,0 +1,277 @@
+#game {
+}
+
+#game .border {
+  height: 3vh;
+  background-color: yellow;
+}
+
+#game #topBar {
+  width: 30vw;
+}
+
+/* Separator */
+#game .separator {
+  background-image: url("../media/prueba.jpg");
+  position: absolute;
+}
+
+/* Section Left */
+#game #sectionLeft {
+  position: absolute;
+  z-index: -1;
+  top: 6vh;
+  left: 0.5vw;
+  width: 30vw;
+  height: 90vh;
+  background-color: #bbe1fa;
+}
+
+/* Separator */
+#game #sectionLeft .separatorTop {
+  width: 30vw;
+  height: 3vh;
+}
+
+#game #sectionLeft .separatorRight {
+  top: 3vh;
+  left: 28.5vw;
+  width: 1.5vw;
+  height: 87vh;
+}
+
+#game #sectionLeft .separatorBottom {
+  top: 90vh;
+  width: 30vw;
+  height: 3vh;
+  background-color: #000;
+}
+
+#game #sectionLeft .separatorLeft {
+  top: 3vh;
+  width: 1.5vw;
+  height: 87vh;
+}
+
+#game #sectionLeft #playerName {
+  padding: 0px 10px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bolder;
+  margin-top: 30px;
+  color: #fff;
+}
+
+#game #sectionLeft .tittle {
+  text-align: center;
+  font-size: 1em;
+  font-weight: bolder;
+}
+
+#elementClick {
+  width: 20vw;
+  height: 30vh;
+  margin-left: 70px;
+}
+
+#game #sectionLeft #elementAnchor #elementClick:hover {
+  cursor: pointer;
+}
+
+/* Section Middle */
+#game #sectionMiddle {
+  position: absolute;
+  top: 6vh;
+  left: 33vw;
+  width: 43vw;
+  height: 93vh;
+  overflow: auto;
+}
+
+/* Separator */
+#game #sectionLeft .separatorTop {
+  width: 30vw;
+  height: 3vh;
+}
+
+#game #sectionLeft .separatorRight {
+}
+
+#game #sectionLeft .separatorBottom {
+}
+
+#game #sectionLeft .separatorLeft {
+}
+
+#game #sectionMiddle #area {
+}
+
+#game #sectionMiddle #area #rows {
+}
+
+#game #sectionMiddle #area #rows .row {
+  background-color: #f00;
+  border: 3px solid salmon;
+  height: 20vh;
+  margin-top: 1.5vh;
+  width: 33vw;
+}
+
+/* Section Right */
+#game #sectionRight {
+  position: absolute;
+  top: 6vh;
+  left: 74.8vw;
+  width: 25vw;
+  height: 90vh;
+  background-color: #bbe1fa;
+}
+
+/* Separator */
+#game #sectionRight .separatorTop {
+  width: 25vw;
+  height: 3vh;
+}
+
+#game #sectionRight .separatorRight {
+  top: 3vh;
+  left: 23.5vw;
+  width: 1.5vw;
+  height: 87vh;
+}
+
+#game #sectionRight .separatorBottom {
+  top: 90vh;
+  width: 25vw;
+  height: 3vh;
+  background-color: #000;
+}
+
+#game #sectionRight .separatorLeft {
+  top: 3vh;
+  width: 1.5vw;
+  height: 87vh;
+}
+
+#game #sectionRight #store {
+  margin: 3vh 1.5vw;
+}
+
+#game #sectionRight #store #storeTittle {
+  height: 5vh;
+  font-size: xx-large;
+  font-weight: bolder;
+  text-align: center;
+}
+
+#game #sectionRight #store #upgrades {
+  background-color: burlywood;
+  overflow: auto;
+}
+
+#game #sectionRight #store #upgrades .upgrade {
+  width: 35px;
+  height: 35px;
+  border: 3px solid #000;
+  float: left;
+  margin: 1px;
+}
+
+#game #sectionRight #store #storeBulk {
+  background-color: blueviolet;
+  font-size: 0.9em;
+  height: 5vh;
+  display: block;
+}
+
+#game #sectionRight #store #storeBulk .storeBulkModes {
+  float: left;
+  width: 60px;
+  height: 5vh;
+}
+
+#game #sectionRight #store #storeBulk .storeBulkModes .storeBulkMode {
+  text-align: center;
+  height: fit-content;
+  float: left;
+  margin: 1px;
+}
+
+#game #sectionRight #store #storeBulk .storeBulkAmount {
+  height: 5vh;
+  width: 60px;
+  text-align: center;
+  float: left;
+  margin-left: 10px;
+  padding: auto;
+}
+
+#game #sectionRight #store #storeBulk .storeBulkModes .storeBulkMode:hover,
+.storeBulkAmount:hover {
+  color: #f00;
+  cursor: pointer;
+  text-shadow: 0em 0em #f00;
+}
+
+#game #sectionRight #store #storeBulk .active {
+  color: yellow;
+  text-shadow: 0em 0em #f00;
+}
+
+#game #sectionRight #store #products {
+}
+#game #sectionRight #store #products .product {
+  background-color: yellow;
+  border: 2px solid #000;
+  font-size: small;
+  overflow: auto;
+  height: 7vh;
+  margin: 10px 0;
+}
+
+#game #sectionRight #store #products .product:hover {
+  cursor: pointer;
+}
+
+#game #sectionRight #store #products .product .icon,
+.content, .owned {
+  margin-top: 10px;
+}
+
+#game #sectionRight #store #products .product .icon {
+  float: left;
+}
+
+#game #sectionRight #store #products .product .icon img {
+  width: 40px;
+  height: 40px;
+}
+
+#game #sectionRight #store #products .product .content {
+  float: left;
+  width: 15vw;
+  margin: 0;
+}
+
+#game #sectionRight #store #products .product .productName {
+  margin-top: 10px;
+}
+
+#game #sectionRight #store #products .product .productName, .price {
+  font-weight: bold;
+  font-size: medium;
+  float: left;
+  background-color: aquamarine;
+  text-align: center;
+  width: 14vw;
+}
+#game #sectionRight #store #products .product .owned {
+  background-color: blue;
+  color: #fff;
+  border-radius: 10px;
+  width: 20px;
+  text-align: center;
+  float: left;
+  margin: 20px 0px 0px 10px;
+}
+

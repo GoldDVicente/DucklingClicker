@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assest/css/styleLogin.css">
+    <title>Registrarse</title>
+</head>
+
+<body>
+    <main>
+        <div id="central">
+            <h1>Duckling clicker</h1>
+            <div id="login">
+                <h2>Registrarse</h2>
+                <form method="post" id="loginForm">
+                    <input type="text" name="user" id="user" placeholder="Nombre de usuario">
+                    <input type="email" name="email" id="email" placeholder="Correo electronico">
+                    <input type="password" name="password" id="password1" placeholder="Contraseña">
+                    <input type="password" name="password" id="password2" placeholder="Repite la contraseña">
+                    <label id="userError"></label>
+                    <label id="emailError"></label>
+                    <label id="passwordError"></label>
+                    <button type="button" title="Ingresar" id="singUp" name="login">Registrarse</button>
+                </form>
+                <footer>
+                    <a href="http://" target="_blank" rel="noopener noreferrer">Terminos de uso</a>
+                    <a href="singIn.html">¿Ya te has registrado? Iniciar sesión</a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer">Duckling clicker &copy; 2023</a>
+                </footer>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="./assest/js/singUp.js"></script>
+
+</html>

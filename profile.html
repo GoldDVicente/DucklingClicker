@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assest/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assest/css/styleProfile.css">
+    <link rel="stylesheet" type="text/css" herf="http.//fonts.googleapis.com/cssfamily=Pacifico">
+    <title>Profile: </title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="aboutUs.html" target="_blank" rel="noopener noreferrer">Duckling clicker &copy; 2023</a>
+                </li>
+                <li>
+                    <a href="http://www.twitter.es" target="_blank"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                </li>
+                <li>
+                    <a href="http://www.instagram.com" target="_blank"><i
+                            class="fa-brands fa-instagram"></i>Instagram</a>
+                </li>
+                <li>
+                    <a href="http://www.discord.com" target="_blank"><i class="fa-brands fa-discord"></i> Discord</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="imgBox">
+            <img id="avatarImg" src="assest/media/avatar/Avatar.png" alt="Avatar">
+            <br>
+            <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+        </div>
+        <div id="valuesBox">
+            <label for="user">Nombre de usuario: </label>
+            <input type="text" name="user" id="user" placeholder="Nombre de usuario" disabled>
+            <br>
+            <label for="email">Correo Electronico: </label>
+            <input type="email" name="email" id="email" placeholder="Correo electronico" disabled>
+            <br>
+            <button type="button" title="password" id="password" name="password">Cambiar Contraseña</button>
+            <br>
+            <button type="button" title="editar" id="editButton" name="edit">Editar</button>
+            <button type="button" title="save" id="saveButton" name="save">Guardar</button>
+        </div>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="assest/js/profile.js"></script>
+
+</html>

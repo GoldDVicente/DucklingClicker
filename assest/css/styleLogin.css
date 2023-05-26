@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    background-image: url('../media/fondoLogin.PNG');
+    background-color: bbe1fa;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+
+}
+
+main #central {
+    max-width: 320px;
+    width: 100%;
+
+}
+
+main #central h1 {
+    background-color: #bbe1fa;
+    border: 4px solid #bbe1fa;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 2.7em;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+    color: yellow;
+}
+
+main #central #login {
+    width: 100%;
+    padding: 50px 30px;
+    background-color: cadetblue;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+
+}
+
+main #central #login h2 {
+    text-align: center;
+    color: yellow;
+}
+
+main #central #login #loginForm input {
+    color: #1b262c;
+
+    display: block;
+    width: 100%;
+    height: 40px;
+
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 10px;
+
+    box-sizing: border-box;
+
+    border: none;
+    border-radius: 3px 3px 3px 3px;
+}
+
+main #central #login #loginForm button {
+    font-size: 110%;
+    color: #1b262c;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background-color: #bbe1fa;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+main #central #login footer {
+    font-size: 90%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+main #central #login footer a {
+    display: block;
+    text-decoration: none;
+    color: #bbe1fa;
+    margin-bottom: 3px;
+}

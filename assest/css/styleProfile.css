@@ -1,0 +1,24 @@
+#imgBox {
+    position: absolute;
+    z-index: -1;
+    top: 6vh;
+    left: 0.5vw;
+    width: 30vw;
+    height: 90vh;
+    background-color: #bbe1fa;
+}
+
+#imgBox #avatarImg {
+    width: 20vw;
+    height: 20vw;
+    margin: 0 auto;
+}
+
+#valuesBox {
+    position: absolute;
+    top: 6vh;
+    left: 33vw;
+    width: 43vw;
+    height: 93vh;
+    overflow: auto;
+}
