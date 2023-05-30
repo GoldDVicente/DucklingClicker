@@ -4,14 +4,15 @@ include 'queries.php';
 
 //GET -> SELECT
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    if(isset($_GET['id'])){
-        $select_value = "SELECT * FROM upgrade WHERE id_upgrade = ".$_GET['id'];
+    if (isset($_GET['id'])) {
+        $select_value = "SELECT * FROM upgrade WHERE id_upgrade = " . $_GET['id'];
 
         SelectValues($connection, $select_value);
         exit();
     }
 
     $select_value = "SELECT * FROM upgrade";
+
     SelectValues($connection, $select_value);
 }
 
@@ -22,8 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $query = mysqli_query($connection, $insert_value);
 
-    $query ? OkRequest($upgrade->name): BadRequest($connection);
-    
+    $query ? OkRequest($upgrade->name) : BadRequest($connection);
+
     exit();
 }
 
@@ -32,15 +33,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'PUT') {
     if (isset($_GET['id'])) {
         $upgrade = json_decode(file_get_contents('php://input'));
         $update_Value = "UPDATE upgrade SET `name`='$upgrade->name', `description`='$upgrade->description', `image`='$upgrade->image',price=$upgrade->price,production=$upgrade->production";
-    }else
+    } else
         NotFoundRequest();
     exit();
 }
 
 //DELETE
 if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
-    if(isset($_GET['id'])){
-        $delete_value = "DELETE FROM upgrade WHERE id_upgrade="-$_GET['id'];
+    if (isset($_GET['id'])) {
+        $delete_value = "DELETE FROM upgrade WHERE id_upgrade=" - $_GET['id'];
 
         $query = mysqli_query($connection, $delete_value);
 
@@ -49,4 +50,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
 }
 
 mysqli_close($conexion);
-?>
