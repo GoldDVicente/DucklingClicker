@@ -1,0 +1,41 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /DucklingClicker/
+#HTMl
+RewriteRule ^singIn$ singIn.html [L]
+RewriteRule ^singUp$ singUp.html [L]
+RewriteRule ^aboutUs$ aboutUs.html [L]
+RewriteRule ^profile$ profile.html [L]
+
+#GAME
+RewriteRule ^game$ ducklingClicker.php [L]
+RewriteRule ^game/(.*)$ ducklingClicker.php?id=$1 [L]
+
+#USER
+RewriteRule ^user/$ assest/php/user.php [L]
+RewriteRule ^user/(.*)/(.*)$ assest/php/user.php?username=$1&password=$2 [L]
+RewriteRule ^user/UserName/(.*)$ assest/php/user.php?username=$1 [L]
+RewriteRule ^user/Email/(.*)$ assest/php/user.php?email=$1 [L]
+RewriteRule ^user/(.*)$ assest/php/user.php?id=$1 [L]
+
+#ITEMS
+
+#USERITEM
+RewriteRule ^userItem/$ assest/php/userItem.php [L]
+RewriteRule ^userItem/(.*)$ assest/php/userItem.php?id=$1 [L]
+
+#UPGRADES
+RewriteRule ^upgrades/$ assest/php/upgrade.php [L]
+RewriteRule ^upgrades/(.*)$ assest/php/upgrade.php?id=$1 [L]
+
+#USERUPGRADES
+RewriteRule ^userUpgrades/$ assest/php/userUpgrade.php [L]
+RewriteRule ^userUpgrades/(.*)$ assest/php/userUpgrade.php?id=$1 [L]
+
+#ACHIEVEMENTS
+RewriteRule ^achievements/$ assest/php/achievement.php [L]
+RewriteRule ^achievements/(.*)$ assest/php/achievement.php?id=$1 [L]
+
+#USERACHIEVEMENTS
+RewriteRule ^userAchievements/$ assest/php/userAchievement.php [L]
+RewriteRule ^userAchievements/(.*)$ assest/php/userAchievement.php?id=$1 [L]
